@@ -1,0 +1,336 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.container-flex{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ----------HEADER---------- */
+header{
+     background: url('../img/Background.jpg') #000103;
+     background-repeat: no-repeat;
+     background-position: center;
+     max-height: 600px;
+ }
+header .main-nav{
+    display: flex;
+    align-items: center;
+    margin: 40 0;
+    transition: all 0.6s;
+
+}
+header .main-nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding-bottom: 8px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+header .main-nav a:hover{
+    border-bottom: 2px solid #fff;
+}
+.container-text{
+    display: flex;
+    justify-content: center;
+    margin: 190px 0;
+}
+.container-text .name{
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+/* -------- MAIN -------- */
+.main .about{
+    text-align: center;
+}
+
+.main .about .text{
+    line-height: 34px;
+    margin-top:80px;
+    margin:80px auto 75px auto;
+    width: 80%;
+}
+.main .about .text .Biography{
+    color: #423B3B;
+    font-weight: 300;
+    font-size: 34px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.main .about .text p{
+    color: #5A5A5A;
+    text-align: left;
+    font-size: 20px;
+}
+
+.main .jobs{
+    background: #F2F2F2;
+    padding: 60px 0;
+}
+.main .jobs h3{
+    text-align: center;
+    font-size: 34px;
+    color: #04070E;
+    font-weight: 300;
+    margin-bottom: 60px;
+    margin-top: 0;
+}
+
+.main .jobs .container-jobs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main .jobs .container-jobs .job {
+    width: 24%;
+}
+.main .jobs .container-jobs .job .thumb{
+    margin-bottom: 17px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.thumb .shadow-img{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.thumb:hover >.shadow-img{
+    top: 100%;
+}
+.main .jobs .container-jobs .job .thumb img{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+/* -------- Slider -------- */
+.container-flexbox{
+    display: flex;
+    justify-content: center;
+}
+
+.sliders{
+    margin: 50px 0px;
+}
+
+.slider{
+    position: relative;
+    width: 70%;
+    max-width: 900px;
+    height: 500px;
+    overflow: hidden;
+
+}
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 100%;
+    height: 500px;
+}
+/* Navigation Manual */
+
+.navigation-manual{
+    bottom: 15px;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #00000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: #ffffff;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;  
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+/* Css for automatic navigation */
+
+.navigation-auto{
+    bottom: 15px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* margin-top: 460px; */
+}
+.navigation-auto div{
+    border:  2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #ffffff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #ffffff;
+}#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #ffffff;
+}#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #ffffff;
+}
+.text-slide{
+    display: flex;
+    justify-content: center;
+}
+.title-slide{
+    font-size: 34px;
+    font-weight: 300;
+    color: #423B3B;
+}
+
+
+
+
+/* -------- Footer -------- */
+footer .social-network{
+    background: #09111C;
+    padding: 60px 0;
+}
+
+footer .social-network a {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+footer .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer .social-network .facebook:hover{
+    background: #1877f2;
+}
+footer .social-network .instagram:hover{
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+footer .social-network .github:hover{
+    background: #008bcf;
+}
+footer .social-network .youtube:hover{
+    background: #ff0000;
+}
+footer .social-network .linke:hover{
+    background: #0077b5;
+}
+header .container .bar{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2em;
+    padding: 0px 20px;
+    line-height: 60px;
+    display: none;
+}
+.main-nav-bar{
+    right: 0 !important;
+
+}
+
+/* -------- Media Queries -------- */
+@media screen and (max-width: 800px){
+    .main .jobs .container-jobs .job {
+        width: 48%;
+    }
+    .navigation-auto{
+        width: 100%;
+    }
+    header .main-nav{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        top: 110px;
+        align-items: flex-end;
+        right: -100%;
+        /* border: 2px solid blue; */
+    }
+    header .main-nav a{
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        
+    }
+    header .container .bar{
+        display: block;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 600px){
+    footer .social-network .container{
+        padding: 20px 0px;
+        flex-wrap: wrap;
+    }
+    .slider{
+        width: 90%;
+        height: 350px;
+    }
+}
